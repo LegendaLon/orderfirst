@@ -1,0 +1,9 @@
+1. Установить Python последней версии(Добавить его в PATH и установить pip(идет в коробке))
+
+2. Установить все модули
+pip install Flask
+pip install DateTime
+pip install prettytable
+pip install colorama
+
+3. Запустить файл main.py

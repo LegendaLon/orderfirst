@@ -1,0 +1,32 @@
+{% extends 'template.html' %}
+
+{% block title_page %}Главная страница{% endblock %}
+
+
+{% block content %}
+
+	<div class="container-xl">
+		<div class="row row-cols-4">
+			{% for product in data.PRODUCTS %}
+				<div class="col">
+				
+					<div class="card" style="width: 18rem;">
+						<div class="card-body hello">
+						    <h5 class="card-title">{{ product.name }}</h5>
+						    <p class="card-text">{{ product.short_description }}</p>
+						</div>
+						<ul class="list-group list-group-flush">
+						    <li class="list-group-item">Стоимость: {{ product.price }}</li>
+						</ul>
+						<div class="card-body">
+							<a href="/{{ product.id }}" class="btn btn-light">Посмотреть</a>
+						</div>
+					</div>
+
+				</div>
+			{% endfor %}
+		</div>
+		
+	</div>
+
+{% endblock %}
